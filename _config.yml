@@ -3,7 +3,7 @@
 
 title: Car Data Exploration Autoscout24
 author: Oliver Schabe & Annika Scheug
-logo: logo2.jpeg
+logo: logo.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
