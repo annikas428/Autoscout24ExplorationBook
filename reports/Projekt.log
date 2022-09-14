@@ -32,8 +32,16 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['#Data visualization', 'import matplotlib.pyplot as plt', '', 'import plotly.express as px', 'import plotly.graph_objs as go']
-...
-['', 'np.set_printoptions(precision=6)', 'np.set_printoptions(suppress=True)', 'pd.set_option("display.max_columns", 200)', 'pd.set_option("display.max_rows", 200)']
+AutoDFraw=pd.DataFrame()
+pageCarDF=pd.DataFrame()
+baselink = "https://www.autoscout24.de/lst?fregfrom="
+fregList = list(range(1990, 2022, 1))
+
+for freg in fregList:
+    for page in range(20):
+        URL = baselink + str(freg) + "&fregto=" + str(freg) + "&page=" + str(page)
+        pageCarDF = extractPageCarDF(URL)
+        AutoDFraw=pd.concat([AutoDFraw, pageCarDF],axis=0, ignore_index=True)
+
 -------------------
 

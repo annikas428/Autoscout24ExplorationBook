@@ -180,7 +180,7 @@ def extractPageCarDF(URL):
 # 
 # Die Methode wird für jeden Filter "Erstzulassung bis" für 20 Suchergebnisseiten ausgeführt, sodass das Dataframe AutoDFraw am Ende über 6000 Einträge enhält.
 
-# In[66]:
+# In[5]:
 
 
 AutoDFraw=pd.DataFrame()
